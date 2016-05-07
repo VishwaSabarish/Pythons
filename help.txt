@@ -1,0 +1,41 @@
+//for start new project
+django-admin startproject myproject
+
+//for start new app
+python manage.py startapp webapp
+
+//to runserver for test
+python manage.py runserver
+
+//to migrate (Run) db
+python manage.py migrate
+
+//to makemigations (Create) to db
+python manage.py makemigrations Basic1
+
+//to see migrate (View) sql file
+python manage.py sqlmigrate Basic1 0001
+
+//for Database api 
+python manage.py shell
+
+//import model or table
+from Basic1.models import Album, Song
+
+//get all from model or table
+Album.objects.all()
+
+//set all for model or table
+a = Album(artist="artist 1", album_title="album title 1", genre="city", album_logo="sample.jpg")
+
+(OR)
+
+b = Album()
+b.artist="artist 1"
+b.album_title="album title 1"
+b.genre="city"
+b.album_logo="sample.jpg"
+
+
+//to save model or table
+a.save()
