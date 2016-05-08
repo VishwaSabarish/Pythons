@@ -19,7 +19,7 @@ python manage.py sqlmigrate Basic1 0001
 //for Database api 
 python manage.py shell
 
-//import model or table
+//import model or table to work on or check
 from Basic1.models import Album, Song
 
 //get all from model or table
@@ -39,3 +39,17 @@ b.album_logo="sample.jpg"
 
 //to save model or table
 a.save()
+
+//to filter the model data by column
+Album.objects.filter(id=1)
+
+//to filter the model data by startswith
+Album.objects.filter(artist__startswith='Taylor')
+
+//create super user or admin
+python manage.py createsuperuser
+Username:admin
+Email:example@example.com
+Password:admin123
+Password (again):admin123
+
