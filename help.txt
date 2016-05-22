@@ -53,3 +53,12 @@ Email:example@example.com
 Password:admin123
 Password (again):admin123
 
+//mysql db connection string
+'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test4py',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
